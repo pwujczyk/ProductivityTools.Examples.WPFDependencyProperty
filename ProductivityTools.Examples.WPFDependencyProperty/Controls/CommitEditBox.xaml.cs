@@ -30,18 +30,18 @@ namespace ProductivityTools.Examples.WPFDependencyProperty.Controls
         }
 
         public static readonly DependencyProperty BoxTextProperty =
-            DependencyProperty.Register("BoxText", typeof(string), typeof(CommitEditBox), new PropertyMetadata(string.Empty,OnBoxTextChanged));
+            DependencyProperty.Register("BoxText", typeof(string), typeof(CommitEditBox));
 
-        private static void OnBoxTextChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-            CommitEditBox notesControl = d as CommitEditBox;
-            notesControl.OnSetTextChanged(e);
-        }
+        //private static void OnBoxTextChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        //{
+        //    CommitEditBox notesControl = d as CommitEditBox;
+        //    notesControl.OnSetTextChanged(e);
+        //}
 
-        private void OnSetTextChanged(DependencyPropertyChangedEventArgs e)
-        {
-            txt.Text = e.NewValue?.ToString();
-        }
+        //private void OnSetTextChanged(DependencyPropertyChangedEventArgs e)
+        //{
+        //    txt.Text = e.NewValue?.ToString();
+        //}
 
 
 

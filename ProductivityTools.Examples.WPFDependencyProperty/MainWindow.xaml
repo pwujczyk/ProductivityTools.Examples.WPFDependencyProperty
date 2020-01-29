@@ -8,6 +8,6 @@
         xmlns:Controls="clr-namespace:ProductivityTools.Examples.WPFDependencyProperty.Controls"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Controls:CommitEditBox x:Name="CommitEditBox" BoxText="{Binding CBText}" Click="{Binding ClickCommand}"/>
+        <Controls:CommitEditBox x:Name="CommitEditBox" BoxText="{Binding CBText, Mode=TwoWay}" Click="{Binding ClickCommand}"/>
     </Grid>
 </Window>
