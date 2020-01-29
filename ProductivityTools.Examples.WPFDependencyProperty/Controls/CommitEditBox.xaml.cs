@@ -42,5 +42,17 @@ namespace ProductivityTools.Examples.WPFDependencyProperty.Controls
         {
             txt.Text = e.NewValue?.ToString();
         }
+
+
+
+        public ICommand Click
+        {
+            get { return (ICommand)GetValue(ClickProperty); }
+            set { SetValue(ClickProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Click.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty ClickProperty =
+            DependencyProperty.Register("Click", typeof(ICommand), typeof(CommitEditBox));
     }
 }

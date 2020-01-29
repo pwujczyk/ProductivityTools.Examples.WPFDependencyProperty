@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProductivityTools.Examples.WPFDependencyProperty.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace ProductivityTools.Examples.WPFDependencyProperty
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = new MainWindowVM() { CBText = "Main.cs" };
         }
     }
 }
